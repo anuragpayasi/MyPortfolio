@@ -1,83 +1,239 @@
-import { useEffect, useRef } from "react"
-import gsap from "gsap"
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
 
+export default function Hero() {
+  const imageRef = useRef(null);
+  const blob1Ref = useRef(null);
+  const blob2Ref = useRef(null);
 
+  const roles = [
+    "MERN Stack Developer",
+    "Frontend Engineer",
+    "React Developer",
+    "Creative UI Developer",
+  ];
 
-const Hero = () => {
-    const titleRef = useRef()
-    useEffect(() => {
+  const [index, setIndex] = useState(0);
 
-        gsap.from(titleRef.current, {
-            y: 100,
-            opacity: 0,
-            duration: 1.2,
-            ease: "power4.out"
-        })
+  // Role Animation
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % roles.length);
+    }, 2200);
 
-    }, [])
-    return (
-        <section className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
-            {/* Background Glow */}
+    return () => clearInterval(interval);
+  }, []);
 
-            <div className="absolute w-[500px] h-[500px] bg-cyan-500/20 blur-[120px] rounded-full top-[-100px] left-[-100px]" />
+  // GSAP Entry Animation
+  useEffect(() => {
+    gsap.fromTo(
+      ".hero-item",
+      {
+        opacity: 0,
+        y: 40,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.12,
+        ease: "power3.out",
+      }
+    );
+  }, []);
 
-            <div className="absolute w-[400px] h-[400px] bg-violet-500/20 blur-[120px] rounded-full bottom-[-100px] right-[-100px]" />
+  // Smooth Cursor Movement Effect
+  useEffect(() => {
+    const moveItems = (e) => {
+      const x = e.clientX / window.innerWidth - 0.5;
+      const y = e.clientY / window.innerHeight - 0.5;
 
-            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+      // Main Image Movement
+      gsap.to(imageRef.current, {
+        x: x * 40,
+        y: y * 40,
+        duration: 1.5,
+        ease: "power3.out",
+      });
 
-                {/* LEFT SIDE */}
-                <div >
+      // Blob Movement
+      gsap.to(blob1Ref.current, {
+        x: x * 80,
+        y: y * 80,
+        duration: 2,
+        ease: "power3.out",
+      });
 
-                    <span className="px-4 py-2 border border-cyan-400 rounded-full text-cyan-300 text-sm"
-                        ref={titleRef}>
-                        Available For Work
-                    </span>
+      gsap.to(blob2Ref.current, {
+        x: -x * 80,
+        y: -y * 80,
+        duration: 2,
+        ease: "power3.out",
+      });
+    };
 
-                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mt-6 leading-tight">
-                        Hi, I'm <br />
+    window.addEventListener("mousemove", moveItems);
 
-                        <span className="text-cyan-400">
-                            Anurag Payasi
-                        </span>
-                    </h1>
+    return () => {
+      window.removeEventListener("mousemove", moveItems);
+    };
+  }, []);
 
-                    <p className="text-slate-300 mt-6 text-lg leading-relaxed max-w-xl">
-                        MERN Stack Developer focused on building modern,
-                        scalable and immersive web experiences.
-                    </p>
+  return (
+    <section
+      id="home"
+      className="relative w-full min-h-screen overflow-hidden bg-[#0B1120]"
+    >
+      {/* ===== MOVING BLOBS ===== */}
 
-                    <div className="flex gap-5 mt-8">
+      {/* Blob 1 */}
+      <div
+        ref={blob1Ref}
+        className="absolute top-[-10%] left-[-10%] w-[260px] sm:w-[350px] h-[260px] sm:h-[350px] bg-indigo-500/20 blur-[110px] rounded-full"
+      ></div>
 
-                        <button className="bg-red-500 p-20 rounded-xl text-white inline-block">
-                            View Projects
-                        </button>
-                        <button className="px-7 py-3 border border-white/20 rounded-xl hover:bg-white/10 transition">
-                            Hire Me
-                        </button>
+      {/* Blob 2 */}
+      <div
+        ref={blob2Ref}
+        className="absolute bottom-[-10%] right-[-10%] w-[260px] sm:w-[350px] h-[260px] sm:h-[350px] bg-cyan-500/10 blur-[110px] rounded-full"
+      ></div>
 
-                    </div>
+      {/* Grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:45px_45px]"></div>
 
-                </div>
+      {/* ===== MAIN CONTENT ===== */}
+      <div className="relative z-10 max-w-7xl mx-auto min-h-screen flex items-center px-5 sm:px-8 lg:px-16 py-28 lg:py-20">
 
-                {/* RIGHT SIDE */}
-                <div className="flex justify-center">
+        <div className="grid lg:grid-cols-2 gap-14 lg:gap-8 items-center w-full">
 
-                    <div className="w-[320px] h-[420px] rounded-[40px] bg-white/5 border border-white/10 backdrop-blur-xl overflow-hidden">
+          {/* ===== LEFT CONTENT ===== */}
+          <div className="order-2 lg:order-1 text-center lg:text-left">
 
-                        <img
-                            src="https://i.imgur.com/8Km9tLL.png"
-                            alt="developer"
-                            className="w-full h-full object-cover"
-                        />
+            {/* Badge */}
+            <div className="hero-item inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-xl mb-6">
 
-                    </div>
+              <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></div>
 
-                </div>
-
+              <span className="text-xs sm:text-sm text-slate-300">
+                Available for Freelance Work
+              </span>
             </div>
 
-        </section>
-    )
-}
+            {/* Heading */}
+            <h1 className="hero-item text-[2.4rem] leading-[1.05] sm:text-5xl md:text-[3.8rem] lg:text-6xl font-bold tracking-tight text-white">
 
-export default Hero 
+              Building Scalable
+
+              <span className="block mt-2 bg-gradient-to-r from-white via-slate-300 to-slate-500 bg-clip-text text-transparent">
+                Modern Web
+              </span>
+
+              Experiences
+            </h1>
+
+            {/* Role */}
+            <div className="hero-item mt-5 text-base sm:text-lg md:text-xl text-slate-300 font-medium">
+
+              I'm a{" "}
+
+              <span className="text-cyan-300">
+                {roles[index]}
+              </span>
+            </div>
+
+            {/* Description */}
+            <p className="hero-item mt-6 text-sm sm:text-base text-slate-400 leading-7 max-w-xl mx-auto lg:mx-0">
+
+              I create modern, scalable and visually polished
+              web applications with smooth interactions,
+              responsive layouts and clean frontend architecture.
+            </p>
+
+            {/* Buttons */}
+            <div className="hero-item mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+
+              <button className="group relative px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-500 text-white font-medium overflow-hidden hover:scale-[1.03] transition duration-300 shadow-lg shadow-cyan-500/10">
+
+                <span className="relative z-10">
+                  View Projects
+                </span>
+
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-white/10 transition"></div>
+              </button>
+
+              <button className="px-6 py-3 rounded-xl border border-white/10 bg-white/[0.04] backdrop-blur-xl text-white hover:bg-white/[0.06] hover:border-white/20 transition duration-300">
+
+                Contact Me
+              </button>
+            </div>
+
+            {/* Stats */}
+            <div className="hero-item mt-10 flex items-center justify-center lg:justify-start gap-6 sm:gap-10 flex-wrap">
+
+              <div>
+                <h3 className="text-2xl font-semibold text-white">
+                  10+
+                </h3>
+
+                <p className="text-slate-400 text-sm mt-1">
+                  Projects
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-semibold text-white">
+                  1+
+                </h3>
+
+                <p className="text-slate-400 text-sm mt-1">
+                  Years Learning
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-semibold text-white">
+                  100%
+                </h3>
+
+                <p className="text-slate-400 text-sm mt-1">
+                  Responsive
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          {/* ===== RIGHT IMAGE ===== */}
+          <div className="order-1 lg:order-2 hero-item flex justify-center">
+
+            <div
+              ref={imageRef}
+              className="relative w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] md:w-[360px] md:h-[360px] lg:w-[420px] lg:h-[420px]"
+            >
+
+              {/* Glow */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500/20 to-indigo-500/20 blur-[60px]"></div>
+
+              {/* Rotating Border */}
+              <div className="absolute inset-0 rounded-full border border-cyan-400/20 animate-spin [animation-duration:14s]"></div>
+
+              {/* Inner Border */}
+              <div className="absolute inset-4 rounded-full border border-white/10"></div>
+
+              {/* Image */}
+              <div className="relative w-full h-full rounded-full overflow-hidden border border-white/10 bg-white/[0.04] backdrop-blur-xl p-3">
+
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+                  alt="developer"
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
