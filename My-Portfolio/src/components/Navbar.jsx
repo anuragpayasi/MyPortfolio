@@ -35,9 +35,9 @@ export default function Navbar() {
       <div className="nav-anim max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* Logo */}
-        <h1 className="text-xl md:text-2xl font-bold tracking-wide cursor-pointer">
-          Anurag<span className="text-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">.dev</span>
-        </h1>
+     <a href="#home">   <h1 className="text-xl md:text-2xl font-bold tracking-wide cursor-pointer">
+          <span className="text-white">Anurag</span><span className="text-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">.dev</span>
+        </h1></a>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-10 text-sm text-gray-300">
@@ -61,9 +61,9 @@ export default function Navbar() {
         </nav>
 
         {/* CTA Button */}
-        <button className="hidden md:block px-6 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium hover:scale-105 transition shadow-lg shadow-cyan-500/20">
+       <a href="#contact"> <button className="hidden md:block px-6 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium hover:scale-105 transition shadow-lg shadow-cyan-500/20">
           Hire Me
-        </button>
+        </button></a>
 
         {/* Mobile Button */}
         <button

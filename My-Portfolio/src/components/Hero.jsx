@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import AnuragProfile from '../assets/AnuragProfile.jpeg'
 
 export default function Hero() {
   const imageRef = useRef(null);
@@ -102,7 +103,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:45px_45px]"></div>
 
       {/* ===== MAIN CONTENT ===== */}
-      <div className="relative z-10 max-w-7xl mx-auto min-h-screen flex items-center px-5 sm:px-8 lg:px-16 py-28 lg:py-20">
+      <div className="relative z-10 max-w-7xl mx-auto min-h-screen flex items-center px-5 sm:px-8 lg:px-5 py-28 lg:py-20">
 
         <div className="grid lg:grid-cols-2 gap-14 lg:gap-8 items-center w-full">
 
@@ -122,13 +123,13 @@ export default function Hero() {
             {/* Heading */}
             <h1 className="hero-item text-[2.4rem] leading-[1.05] sm:text-5xl md:text-[3.8rem] lg:text-6xl font-bold tracking-tight text-white">
 
-              Building Scalable
+              Hello, World! 🌍
 
-              <span className="block mt-2 bg-gradient-to-r from-white via-slate-300 to-slate-500 bg-clip-text text-transparent">
-                Modern Web
+              <span className="block mt-2 bg-gradient-to-r from-white via-slate-300 to-slate-500 bg-clip-text text-transparent pb-4">
+                I am Anurag  Payasi
               </span>
 
-              Experiences
+
             </h1>
 
             {/* Role */}
@@ -144,9 +145,7 @@ export default function Hero() {
             {/* Description */}
             <p className="hero-item mt-6 text-sm sm:text-base text-slate-400 leading-7 max-w-xl mx-auto lg:mx-0">
 
-              I create modern, scalable and visually polished
-              web applications with smooth interactions,
-              responsive layouts and clean frontend architecture.
+              A MERN Stack Developer who turns ideas into reality through clean code and creative thinking. I believe great websites are built at the intersection of logic and creativity — and that's exactly where I love to work. Always learning, always building, always growing.
             </p>
 
             {/* Buttons */}
@@ -155,7 +154,7 @@ export default function Hero() {
               <button className="group relative px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-500 text-white font-medium overflow-hidden hover:scale-[1.03] transition duration-300 shadow-lg shadow-cyan-500/10">
 
                 <span className="relative z-10">
-                  View Projects
+                  View My Work
                 </span>
 
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-white/10 transition"></div>
@@ -172,7 +171,7 @@ export default function Hero() {
 
               <div>
                 <h3 className="text-2xl font-semibold text-white">
-                  10+
+                  2+
                 </h3>
 
                 <p className="text-slate-400 text-sm mt-1">
@@ -224,7 +223,7 @@ export default function Hero() {
               <div className="relative w-full h-full rounded-full overflow-hidden border border-white/10 bg-white/[0.04] backdrop-blur-xl p-3">
 
                 <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+                  src={AnuragProfile}
                   alt="developer"
                   className="w-full h-full object-cover rounded-full"
                 />

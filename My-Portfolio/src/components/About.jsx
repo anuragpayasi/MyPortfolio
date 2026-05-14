@@ -36,7 +36,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative w-full overflow-hidden bg-[#0B1120] pt-0 pb-24 sm:pb-28 px-5 sm:px-8 lg:px-16"
+      className="relative w-full overflow-hidden bg-[#0B1120] pt-30 pb-24 sm:pb-28 px-5 sm:px-8 lg:px-16"
     >
 
       {/* ===== SAME HERO BACKGROUND ===== */}
@@ -74,24 +74,112 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-14 lg:gap-16 items-center">
 
           {/* ===== LEFT SIDE ===== */}
-          <div className="about-anim">
+         {/* ===== LEFT SIDE ===== */}
+<div className="about-anim">
 
-            <div className="relative group max-w-md mx-auto lg:mx-0">
+  <div className="relative max-w-xl mx-auto lg:mx-0">
 
-              {/* Glow */}
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-indigo-500/10 blur-3xl rounded-3xl"></div>
+    {/* Glow */}
+    <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 to-indigo-500/10 blur-3xl rounded-3xl"></div>
 
-              {/* Card */}
-              <div className="relative rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-xl overflow-hidden p-3">
+    {/* Main Card */}
+    <div className="relative rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-xl p-6 sm:p-8 overflow-hidden">
 
-                <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
-                  alt="about"
-                  className="w-full h-[320px] sm:h-[420px] object-cover rounded-2xl group-hover:scale-[1.03] transition duration-500"
-                />
-              </div>
-            </div>
+      {/* Heading */}
+      <div className="mb-10">
+
+        <p className="text-cyan-300 text-sm tracking-[3px] uppercase mb-3">
+          Journey
+        </p>
+
+        <h3 className="text-2xl sm:text-3xl font-semibold text-white leading-tight">
+
+          My Development
+          <span className="block text-slate-400 mt-1">
+            Journey Timeline
+          </span>
+        </h3>
+      </div>
+
+      {/* ===== TIMELINE ===== */}
+      <div className="relative">
+
+        {/* Line */}
+        <div className="absolute left-[14px] top-2 w-[2px] h-full bg-gradient-to-b from-cyan-400/50 to-indigo-500/20"></div>
+
+        {/* ===== ITEM 1 ===== */}
+        <div className="relative pl-12 pb-10">
+
+          {/* Dot */}
+          <div className="absolute left-0 top-1 w-7 h-7 rounded-full border border-cyan-400/40 bg-[#0B1120] flex items-center justify-center">
+
+            <div className="w-2.5 h-2.5 rounded-full bg-cyan-300"></div>
           </div>
+
+          <span className="text-xs text-cyan-300 tracking-[2px] uppercase">
+            2024
+          </span>
+
+          <h4 className="text-lg font-semibold text-white mt-2">
+            Started Web Development
+          </h4>
+
+          <p className="text-sm text-slate-400 leading-7 mt-3">
+            Started learning HTML, CSS and JavaScript while building
+            responsive UI projects and frontend clones.
+          </p>
+        </div>
+
+        {/* ===== ITEM 2 ===== */}
+        <div className="relative pl-12 pb-10">
+
+          {/* Dot */}
+          <div className="absolute left-0 top-1 w-7 h-7 rounded-full border border-cyan-400/40 bg-[#0B1120] flex items-center justify-center">
+
+            <div className="w-2.5 h-2.5 rounded-full bg-cyan-300"></div>
+          </div>
+
+          <span className="text-xs text-cyan-300 tracking-[2px] uppercase">
+            2025
+          </span>
+
+          <h4 className="text-lg font-semibold text-white mt-2">
+            MERN Stack Learning
+          </h4>
+
+          <p className="text-sm text-slate-400 leading-7 mt-3">
+            Built full stack projects using React, Node.js,
+            Express and MongoDB with authentication systems.
+          </p>
+        </div>
+
+        {/* ===== ITEM 3 ===== */}
+        <div className="relative pl-12">
+
+          {/* Dot */}
+          <div className="absolute left-0 top-1 w-7 h-7 rounded-full border border-cyan-400/40 bg-[#0B1120] flex items-center justify-center">
+
+            <div className="w-2.5 h-2.5 rounded-full bg-cyan-300"></div>
+          </div>
+
+          <span className="text-xs text-cyan-300 tracking-[2px] uppercase">
+            2026
+          </span>
+
+          <h4 className="text-lg font-semibold text-white mt-2">
+            Building Professional Products
+          </h4>
+
+          <p className="text-sm text-slate-400 leading-7 mt-3">
+            Focused on scalable architecture, premium UI systems,
+            animations and production-ready web applications.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
 
           {/* ===== RIGHT SIDE ===== */}
           <div>
@@ -101,22 +189,17 @@ export default function About() {
 
               <h3 className="text-2xl sm:text-3xl font-semibold text-white leading-tight">
 
-                MERN Stack Developer focused on creating scalable,
-                interactive and user-friendly digital products.
+             Hey! I'm Anurag Payasi, a MERN Stack Developer and coding is not just what I do, it's what I live for.
               </h3>
 
               <p className="mt-6 text-slate-400 leading-7 text-sm sm:text-base">
 
-                I specialize in building modern web applications
-                using React, Node.js and modern frontend technologies.
-                My focus is on creating clean UI, smooth interactions
-                and responsive user experiences across all devices.
+             I didn't just stumble into development — I chose it because I genuinely love the process of building something from absolutely nothing. The moment an idea transforms into a fully functional, beautiful web experience — that feeling never gets old.
               </p>
 
               <p className="mt-4 text-slate-400 leading-7 text-sm sm:text-base">
 
-                I enjoy transforming ideas into real-world applications
-                with attention to performance, scalability and modern design systems.
+              Right now I'm building strong — sharpening my frontend expertise while leveling up my backend skills every single day. I'm not here to be average. I'm here to be exceptional.
               </p>
             </div>
 
@@ -147,7 +230,7 @@ export default function About() {
               <div className="p-5 rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-xl">
 
                 <h4 className="text-2xl font-bold text-white">
-                  10+
+                  2+
                 </h4>
 
                 <p className="text-slate-400 text-sm mt-2">

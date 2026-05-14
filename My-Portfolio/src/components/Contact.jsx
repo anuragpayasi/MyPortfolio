@@ -70,7 +70,7 @@ export default function Contact() {
           {/* ===== LEFT SIDE ===== */}
           <div className="contact-anim">
 
-            <div className="h-full rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-xl p-7 sm:p-8 flex flex-col justify-between">
+            <div className="h-full rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-xl p-7 sm:p-8 flex flex-col justify-center">
 
               {/* Top */}
               <div>
@@ -92,6 +92,22 @@ export default function Contact() {
               <div className="mt-10 space-y-5">
 
                 {/* Email */}
+                <div className="flex items-start gap-4">
+
+                  <div className="w-12 h-12 rounded-2xl border border-white/10 bg-white/[0.04] flex items-center justify-center text-cyan-300 text-lg">
+                    ✉
+                  </div>
+
+                  <div>
+                    <p className="text-sm text-slate-400">
+                      Email
+                    </p>
+
+                    <h4 className="text-white mt-1 break-all">
+                      yourmail@gmail.com
+                    </h4>
+                  </div>
+                </div>
                 <div className="flex items-start gap-4">
 
                   <div className="w-12 h-12 rounded-2xl border border-white/10 bg-white/[0.04] flex items-center justify-center text-cyan-300 text-lg">
@@ -230,7 +246,7 @@ export default function Contact() {
               {/* Button */}
               <button
                 type="submit"
-                className="w-full h-13 rounded-2xl bg-gradient-to-r from-cyan-500 to-indigo-500 text-white font-medium hover:scale-[1.01] transition duration-300 shadow-lg shadow-cyan-500/10"
+                className="w-full h-13 rounded-2xl bg-gradient-to-r from-cyan-500 to-indigo-500 text-white font-medium hover:scale-[1.01] transition duration-300 shadow-lg shadow-cyan-500/10 mt-7"
               >
                 Send Message
               </button>
