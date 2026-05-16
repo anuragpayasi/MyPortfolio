@@ -123,7 +123,7 @@ export default function Hero() {
             {/* Heading */}
             <h1 className="hero-item text-[2.4rem] leading-[1.05] sm:text-5xl md:text-[3.8rem] lg:text-6xl font-bold tracking-tight text-white">
 
-              Hello, World! 🌍
+              Hello, World! 
 
               <span className="block mt-2 bg-gradient-to-r from-white via-slate-300 to-slate-500 bg-clip-text text-transparent pb-4">
                 I am Anurag  Payasi
@@ -153,17 +153,17 @@ export default function Hero() {
 
               <button className="group relative px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-500 text-white font-medium overflow-hidden hover:scale-[1.03] transition duration-300 shadow-lg shadow-cyan-500/10">
 
-                <span className="relative z-10">
+                <a href="#projects"><span className="relative z-10">
                   View My Work
-                </span>
+                </span></a>
 
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-white/10 transition"></div>
               </button>
 
-              <button className="px-6 py-3 rounded-xl border border-white/10 bg-white/[0.04] backdrop-blur-xl text-white hover:bg-white/[0.06] hover:border-white/20 transition duration-300">
+             <a href="#contact"> <button className="px-6 py-3 rounded-xl border border-white/10 bg-white/[0.04] backdrop-blur-xl text-white hover:bg-white/[0.06] hover:border-white/20 transition duration-300">
 
                 Contact Me
-              </button>
+              </button></a>
             </div>
 
             {/* Stats */}
