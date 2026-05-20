@@ -104,7 +104,7 @@ export default function Contact() {
                     </p>
 
                     <h4 className="text-white mt-1 break-all">
-                      yourmail@gmail.com
+                      anuragpayasi124@gmail.com
                     </h4>
                   </div>
                 </div>
@@ -120,7 +120,7 @@ export default function Contact() {
                     </p>
 
                     <h4 className="text-white mt-1 break-all">
-                      yourmail@gmail.com
+                      anuragpayasi124@gmail.com
                     </h4>
                   </div>
                 </div>
@@ -138,7 +138,7 @@ export default function Contact() {
                     </p>
 
                     <h4 className="text-white mt-1">
-                      +91 9876543210
+                      +91 7987278172
                     </h4>
                   </div>
                 </div>
@@ -156,7 +156,7 @@ export default function Contact() {
 
                   {/* Github */}
                   <a
-                    href="/"
+                    href="https://github.com/anuragpayasi" target="blank"
                     className="w-12 h-12 rounded-2xl border border-white/10 bg-white/[0.04] flex items-center justify-center text-white hover:text-cyan-300 hover:border-cyan-400/30 hover:-translate-y-1 transition duration-300"
                   >
                     <FaGithub size={18} />
@@ -164,7 +164,7 @@ export default function Contact() {
 
                   {/* Linkedin */}
                   <a
-                    href="/"
+                    href="https://www.linkedin.com/in/anurag-payasi?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="blank"
                     className="w-12 h-12 rounded-2xl border border-white/10 bg-white/[0.04] flex items-center justify-center text-white hover:text-cyan-300 hover:border-cyan-400/30 hover:-translate-y-1 transition duration-300"
                   >
                     <FaLinkedinIn size={18} />
@@ -172,7 +172,7 @@ export default function Contact() {
 
                   {/* Instagram */}
                   <a
-                    href="/"
+                    href="https://www.instagram.com/mr.payasi?igsh=MWFiNG1wa3UwbDIzOA==" target="blank"
                     className="w-12 h-12 rounded-2xl border border-white/10 bg-white/[0.04] flex items-center justify-center text-white hover:text-cyan-300 hover:border-cyan-400/30 hover:-translate-y-1 transition duration-300"
                   >
                     <FaInstagram size={18} />
@@ -210,7 +210,7 @@ export default function Contact() {
 
                 <input
                   type="text"
-                  placeholder="John Doe"
+                  placeholder="Your Name"
                   className="w-full h-13 rounded-2xl border border-white/10 bg-[#111827]/70 px-5 text-white placeholder:text-slate-500 outline-none focus:border-cyan-400/40 transition"
                 />
               </div>
@@ -224,7 +224,7 @@ export default function Contact() {
 
                 <input
                   type="email"
-                  placeholder="example@gmail.com"
+                  placeholder="Your Email"
                   className="w-full h-13 rounded-2xl border border-white/10 bg-[#111827]/70 px-5 text-white placeholder:text-slate-500 outline-none focus:border-cyan-400/40 transition"
                 />
               </div>

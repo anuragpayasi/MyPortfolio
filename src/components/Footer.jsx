@@ -161,7 +161,7 @@ export default function Footer() {
 
                   {/* Github */}
                   <a
-                    href="/"
+                    href="https://github.com/anuragpayasi" target="blank"
                     className="w-11 h-11 rounded-2xl border border-white/10 bg-white/[0.04] flex items-center justify-center text-white hover:text-cyan-300 hover:border-cyan-400/30 hover:-translate-y-1 transition duration-300"
                   >
                     <FaGithub size={17} />
@@ -169,7 +169,7 @@ export default function Footer() {
 
                   {/* Linkedin */}
                   <a
-                    href="/"
+                    href="https://www.linkedin.com/in/anurag-payasi?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="blank"
                     className="w-11 h-11 rounded-2xl border border-white/10 bg-white/[0.04] flex items-center justify-center text-white hover:text-cyan-300 hover:border-cyan-400/30 hover:-translate-y-1 transition duration-300"
                   >
                     <FaLinkedinIn size={17} />
@@ -177,7 +177,7 @@ export default function Footer() {
 
                   {/* Instagram */}
                   <a
-                    href="/"
+                    href="https://www.instagram.com/mr.payasi?igsh=MWFiNG1wa3UwbDIzOA==" target="blank"
                     className="w-11 h-11 rounded-2xl border border-white/10 bg-white/[0.04] flex items-center justify-center text-white hover:text-cyan-300 hover:border-cyan-400/30 hover:-translate-y-1 transition duration-300"
                   >
                     <FaInstagram size={17} />

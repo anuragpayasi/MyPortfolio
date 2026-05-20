@@ -116,7 +116,7 @@ export default function Hero() {
               <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></div>
 
               <span className="text-xs sm:text-sm text-slate-300">
-                Available for Freelance Work
+                Available for  Work
               </span>
             </div>
 
