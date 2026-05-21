@@ -117,7 +117,7 @@ export default function Projects() {
         </div>
 
         {/* ===== PROJECT GRID ===== */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {filteredProjects.map((project, index) => (
 
@@ -126,7 +126,7 @@ export default function Projects() {
               className="project-anim group relative rounded-3xl overflow-hidden border border-white/10 bg-white/[0.04] backdrop-blur-xl hover:border-cyan-400/20 transition duration-500"
             >
 
-              {/* Image */}
+          
               <div className="overflow-hidden">
 
                 <img
@@ -136,25 +136,24 @@ export default function Projects() {
                 />
               </div>
 
-              {/* Content */}
+     
               <div className="p-6">
 
-                {/* Category */}
+            
                 <span className="text-xs text-cyan-300 tracking-[3px] uppercase">
                   {project.category}
                 </span>
 
-                {/* Title */}
+           
                 <h3 className="text-xl font-semibold text-white mt-3">
                   {project.title}
                 </h3>
 
-                {/* Desc */}
                 <p className="text-slate-400 text-sm leading-7 mt-4">
                   {project.desc}
                 </p>
 
-                {/* Tech Stack */}
+               
                 <div className="flex flex-wrap gap-2 mt-5">
 
                   {project.tech.map((tech, i) => (
@@ -168,7 +167,7 @@ export default function Projects() {
 
                 </div>
 
-                {/* Buttons */}
+          
                 <div className="flex items-center gap-3 mt-6">
 
                   <button className="px-4 py-2 rounded-lg bg-cyan-500 text-white text-sm hover:bg-cyan-400 transition">
@@ -189,7 +188,10 @@ export default function Projects() {
 
           ))}
 
-        </div>
+         
+
+        </div> */}
+         <h1 className="text-center text-4xl text-zinc-500 ">Working on this section</h1>
       </div>
     </section>
   );

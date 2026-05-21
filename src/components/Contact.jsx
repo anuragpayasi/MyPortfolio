@@ -108,7 +108,7 @@ export default function Contact() {
                     </h4>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
+                {/* <div className="flex items-start gap-4">
 
                   <div className="w-12 h-12 rounded-2xl border border-white/10 bg-white/[0.04] flex items-center justify-center text-cyan-300 text-lg">
                     ✉
@@ -123,7 +123,7 @@ export default function Contact() {
                       anuragpayasi124@gmail.com
                     </h4>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Phone */}
                 <div className="flex items-start gap-4">
