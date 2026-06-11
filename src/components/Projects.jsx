@@ -26,21 +26,23 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "Modern Portfolio",
+      title: "Expense Spliter",
       category: "Frontend",
       image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+        "https://res.cloudinary.com/dbkmgrjup/image/upload/v1781090812/expense_spliter_thumbnail_trpjhx.png",
       desc: "Modern animated portfolio website with smooth UI interactions.",
       tech: ["React", "Tailwind", "GSAP"],
+      link : "https://splitourexpense.vercel.app/"
     },
 
     {
-      title: "E-Commerce Platform",
+      title: "Anchor's Portfolio",
       category: "Full Stack",
       image:
-        "https://images.unsplash.com/photo-1556740749-887f6717d7e4",
+        "https://res.cloudinary.com/dbkmgrjup/image/upload/q_auto/f_auto/v1781091859/anchors_portfolio_thumbnail_csq6dg.png",
       desc: "Full stack ecommerce application with secure authentication.",
       tech: ["MERN", "JWT", "MongoDB"],
+      link : "https://anchoranamika.vercel.app/"
     },
 
     {
@@ -117,7 +119,7 @@ export default function Projects() {
         </div>
 
         {/* ===== PROJECT GRID ===== */}
-        {/* <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {filteredProjects.map((project, index) => (
 
@@ -170,14 +172,16 @@ export default function Projects() {
           
                 <div className="flex items-center gap-3 mt-6">
 
-                  <button className="px-4 py-2 rounded-lg bg-cyan-500 text-white text-sm hover:bg-cyan-400 transition">
+                  <a href={project.link} target="blank">
+                    <button className="px-4 py-2 rounded-lg bg-cyan-500 text-white text-sm hover:bg-cyan-400 transition cursor-pointer">
 
                     Live Demo
                   </button>
+                  </a>
 
                   <button className="px-4 py-2 rounded-lg border border-white/10 bg-white/[0.04] text-white text-sm hover:border-cyan-400/30 transition">
 
-                    GitHub
+                    How it Works
                   </button>
 
                 </div>
@@ -190,7 +194,7 @@ export default function Projects() {
 
          
 
-        </div> */}
+        </div>
          <h1 className="text-center text-4xl text-zinc-500 ">Working on this section</h1>
       </div>
     </section>

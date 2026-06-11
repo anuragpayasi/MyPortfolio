@@ -76,7 +76,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden px-6 pt-8 pb-6 flex flex-col gap-5 text-gray-300 bg-black/80 backdrop-blur-xl border-t border-white/10"
+        <div className="md:hidden px-6 pt-8 pb-6 flex flex-col gap-5 text-gray-300 bg-black/80 backdrop-blur-xl border-t border-white/10 transition-normal transition-all duration-500 ease-in-out"
         onClick={() => setMenuOpen(!menuOpen)}>
 
           <a href="#home" className="hover:text-cyan-400">Home</a>
