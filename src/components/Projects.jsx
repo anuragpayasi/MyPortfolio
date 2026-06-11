@@ -195,7 +195,7 @@ export default function Projects() {
          
 
         </div>
-         <h1 className="text-center text-4xl text-zinc-500 ">Working on this section</h1>
+         {/* <h1 className="text-center text-4xl text-zinc-500 ">Working on this section</h1> */}
       </div>
     </section>
   );
